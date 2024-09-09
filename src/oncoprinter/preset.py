@@ -142,7 +142,7 @@ MATCH_POOL = {
         startswith="missense", contains=["passenger"]
     ),
     Alteration.MISSENSE: MatchRule(
-        startswith="missense", contains=["driver"], flexible=True
+        startswith="missense", contains=["driver"], flexible=False
     ),
     Alteration.PROMOTER: MatchRule(startswith="promoter"),
     Alteration.TRUNC_PASSENGER: MatchRule(startswith="trunc", contains=["passenger"]),
