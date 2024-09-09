@@ -127,10 +127,10 @@ MATCH_POOL = {
     Alteration.AMP: MatchRule(startswith="amp"),
     Alteration.GAIN: MatchRule(startswith="gain"),
     Alteration.HOMDEL: MatchRule(
-        startswith="homdel", contains=["deep", "deletion"], flexible=True
+        startswith="homdel", contains=["deep", "deletion"], flexible=False
     ),
     Alteration.HETLOSS: MatchRule(
-        startswith="hetloss", contains=["shallow", "deletion"], flexible=True
+        startswith="hetloss", contains=["shallow", "deletion"], flexible=False
     ),
     Alteration.MRNA_HIGH: MatchRule(contains=["mrna", "high"]),
     Alteration.MRNA_LOW: MatchRule(contains=["mrna", "low"]),
@@ -146,16 +146,16 @@ MATCH_POOL = {
     ),
     Alteration.PROMOTER: MatchRule(startswith="promoter"),
     Alteration.TRUNC_PASSENGER: MatchRule(startswith="trunc", contains=["passenger"]),
-    Alteration.TRUNC: MatchRule(startswith="trunc"),
+    Alteration.TRUNC: MatchRule(startswith="trunc", contains=["driver"]),
     Alteration.INFRAME_PASSENGER: MatchRule(
         startswith="inframe", contains=["passenger"]
     ),
-    Alteration.INFRAME: MatchRule(startswith="inframe"),
+    Alteration.INFRAME: MatchRule(startswith="inframe", contains=["driver"]),
     Alteration.STRUCTURAL_VARIANT_PASSENGER: MatchRule(
-        startswith="sv", contains=["structural", "variant", "passenger"], flexible=True
+        startswith="sv", contains=["structural", "variant", "passenger"], flexible=False
     ),
     Alteration.STRUCTURAL_VARIANT: MatchRule(
-        startswith="sv", contains=["structural", "variant"], flexible=True
+        startswith="sv", contains=["structural", "variant"], flexible=False
     ),
     Alteration.SPLICE_PASSENGER: MatchRule(startswith="splice", contains=["passenger"]),
     Alteration.SPLICE: MatchRule(startswith="splice"),
